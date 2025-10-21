@@ -76,3 +76,18 @@
         --btn-py: 1.125rem;
     }
 }
+body {
+  background-color: #0b0c10;
+  color: #f2f2f2;
+  font-family: 'Inter', sans-serif;
+  margin-top: 80px; /* dá espaço pro header fixo */
+}
+
+a {
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+h1, h2 {
+  color: #00aaff;
+}

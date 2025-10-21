@@ -91,3 +91,37 @@ a {
 h1, h2 {
   color: #00aaff;
 }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0b0c10;
+  color: #f2f2f2;
+  margin-top: 100px; /* espaçamento pro menu fixo */
+}
+
+/* 🔹 Estilo do menu */
+.menu-item {
+  position: relative;
+  padding-bottom: 4px;
+  color: #f2f2f2;
+  transition: color 0.2s ease;
+}
+
+.menu-item:hover {
+  color: #66b3ff;
+}
+
+.menu-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #66b3ff;
+  transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+  width: 100%;
+}
+

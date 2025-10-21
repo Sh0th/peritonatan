@@ -1,24 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';
 ---
 
 <Layout title="Perito Natan | Perícia Forense Digital e Segurança da Informação">
   <Fragment slot="head">
-    <meta name="description" content="Perito Natan Fachini — Perícia Forense Digital, Segurança da Informação e Investigação Cibernética." />
+    <meta name="description" content="Perito Natan Fachini — Especialista em Perícia Forense Digital, Segurança da Informação e Investigação Cibernética." />
     <meta name="author" content="Natan Fachini" />
+    <style>
+      html {{
+        scroll-behavior: smooth;
+      }}
+    </style>
   </Fragment>
 
-  <!-- 🔹 Alerta contextual do Astro -->
-  <ContextAlert class="mb-8" />
+  <!-- 🔹 MENU FIXO NO TOPO -->
+  <header class="fixed top-0 left-0 w-full bg-complementary/80 backdrop-blur-md z-50 border-b border-white/10">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
+      <div class="flex items-center gap-3">
+        <img src="/logo.png" alt="Logo Perito Natan" class="h-8 w-auto" />
+        <span class="text-white text-lg font-semibold">Perito Natan</span>
+      </div>
+      <nav class="flex items-center gap-6 text-sm text-white">
+        <a href="#inicio" class="hover:text-primary transition">Início</a>
+        <a href="#sobre" class="hover:text-primary transition">Sobre</a>
+        <a href="#atuacao" class="hover:text-primary transition">Atuação</a>
+        <a href="#artigos" class="hover:text-primary transition">Artigos</a>
+        <a href="#cursos" class="hover:text-primary transition">Cursos</a>
+        <a href="#contato" class="hover:text-primary transition">Contato</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- 🟦 Seção Início -->
-  <section id="inicio" class="text-center mt-20">
+  <!-- 🏠 INÍCIO -->
+  <section id="inicio" class="text-center pt-40">
     <h1 class="text-5xl font-bold mb-6">Perito Natan Fachini</h1>
     <p class="text-xl mb-8 max-w-3xl mx-auto">
       Especialista em <strong>Perícia Forense Digital</strong> e <strong>Segurança da Informação</strong>,
-      com experiência em análise de evidências, autenticação de documentos digitais, rastreamento de incidentes e investigação cibernética.
+      com experiência em análise de evidências, autenticação de documentos digitais e investigação de crimes cibernéticos.
     </p>
     <a href="https://wa.me/5554999058637" target="_blank"
       class="bg-green-600 text-white px-6 py-3 rounded-xl text-lg hover:bg-green-700 transition">
@@ -26,16 +44,16 @@ import Markdown from '../components/Markdown.astro';
     </a>
   </section>
 
-  <!-- 🧠 Sobre -->
+  <!-- 🧠 SOBRE -->
   <section id="sobre" class="mt-24 text-center">
     <h2 class="text-3xl font-semibold mb-4">Sobre</h2>
     <p class="text-lg max-w-4xl mx-auto leading-relaxed">
-      Atuo como Perito Forense Digital e Consultor em Segurança da Informação, auxiliando escritórios de advocacia, empresas e o poder judiciário em
-      demandas que envolvem evidências digitais. Desenvolvo análises técnicas e pareceres que sustentam a verdade dos fatos em processos judiciais e administrativos.
+      Atuo como Perito Forense Digital e Consultor em Segurança da Informação, auxiliando escritórios de advocacia,
+      empresas e o poder judiciário em demandas que envolvem evidências digitais e incidentes cibernéticos.
     </p>
   </section>
 
-  <!-- ⚖️ Áreas de Atuação -->
+  <!-- ⚖️ ATUAÇÃO -->
   <section id="atuacao" class="mt-24 text-center">
     <h2 class="text-3xl font-semibold mb-4">Áreas de Atuação</h2>
     <ul class="list-none text-lg leading-relaxed">
@@ -47,40 +65,39 @@ import Markdown from '../components/Markdown.astro';
     </ul>
   </section>
 
-  <!-- 📰 Artigos -->
+  <!-- 📰 ARTIGOS -->
   <section id="artigos" class="mt-24 text-center">
     <h2 class="text-3xl font-semibold mb-4">Artigos e Publicações</h2>
     <p class="text-lg max-w-3xl mx-auto leading-relaxed">
-      Em breve, publicações sobre temas como <strong>computação forense</strong>, <strong>cadeia de custódia digital</strong>,
-      e <strong>investigação de fraudes eletrônicas</strong>.
+      Em breve, publicações sobre <strong>computação forense</strong>, <strong>cadeia de custódia</strong> e
+      <strong>investigação de fraudes digitais</strong>.
     </p>
   </section>
 
-  <!-- 🎓 Cursos -->
+  <!-- 🎓 CURSOS -->
   <section id="cursos" class="mt-24 text-center">
     <h2 class="text-3xl font-semibold mb-4">Cursos e Treinamentos</h2>
     <p class="text-lg max-w-3xl mx-auto leading-relaxed">
-      Workshops e treinamentos práticos em <strong>Perícia Digital</strong> e <strong>Segurança da Informação</strong>.
-      <br />
-      Capacitação para advogados, peritos e profissionais da área técnica.
+      Workshops e capacitações práticas em <strong>Perícia Digital</strong> e <strong>Segurança da Informação</strong>,
+      voltados para advogados, peritos e profissionais técnicos.
     </p>
   </section>
 
-  <!-- 📩 Contato -->
-  <section id="contato" class="mt-24 text-center">
+  <!-- 📩 CONTATO -->
+  <section id="contato" class="mt-24 text-center mb-24">
     <h2 class="text-3xl font-semibold mb-4">Contato</h2>
     <p class="text-lg">
-      📧 <a href="mailto:contato@peritonatan.com.br" class="underline text-blue-400">contato@peritonatan.com.br</a>
+      📧 <a href="mailto:contato@peritonatan.com.br" class="underline text-primary">contato@peritonatan.com.br</a>
     </p>
     <p class="text-lg">📍 Farroupilha • Rio Grande do Sul</p>
   </section>
 
-  <!-- ⚙️ Rodapé -->
-  <footer class="mt-32 text-center text-sm text-gray-400">
+  <!-- ⚙️ RODAPÉ -->
+  <footer class="mt-12 text-center text-sm text-gray-400 pb-8">
     <p>© 2025 Perito Natan Fachini — Todos os direitos reservados.</p>
   </footer>
 
-  <!-- 🔹 Botão flutuante do WhatsApp -->
+  <!-- 🔹 BOTÃO FLUTUANTE WHATSAPP -->
   <a href="https://wa.me/5554999058637" target="_blank"
     class="fixed bottom-6 right-6 bg-green-600 text-white rounded-full shadow-lg p-4 hover:bg-green-700 transition transform hover:scale-110 z-50"
     aria-label="Fale comigo no WhatsApp">

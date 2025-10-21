@@ -1,29 +1,43 @@
-<nav class="fixed top-0 left-0 w-full bg-[#0e3a75] text-white shadow-md z-50">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-8 py-3">
+---
+const menuItems = [
+  { name: "INÍCIO", href: "/" },
+  { name: "SOBRE", href: "#sobre" },
+  { name: "ATUAÇÃO", href: "#atuacao" },
+  { name: "ARTIGOS", href: "#artigos" },
+  { name: "CURSOS", href: "#cursos" },
+  { name: "CONTATO", href: "#contato" },
+];
+---
 
-    <!-- 🔹 Logotipo -->
-    <a href="/" class="flex items-center gap-3">
-      <img src="/logo.png" alt="Logo Perito Natan" class="h-12 w-auto" />
+<header class="bg-[#0e3a75] text-white shadow-md">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 py-4">
+
+    <!-- 🔹 Logo e título -->
+    <div class="flex items-center gap-4">
+      <img src="/logo.png" alt="Logo Perito Natan" class="h-14 w-auto object-contain" />
       <div>
-        <h1 class="text-2xl font-bold text-white leading-tight">Perito Natan</h1>
-        <p class="text-sm text-gray-200">Perícia Forense Digital & Segurança da Informação</p>
+        <h1 class="text-2xl font-bold text-cyan-400">Perito Natan</h1>
+        <p class="text-sm text-gray-200">Perícia Forense Digital &amp; Segurança da Informação</p>
       </div>
-    </a>
+    </div>
 
     <!-- 🔹 Menu -->
-    <ul class="flex flex-wrap gap-x-8 text-base font-medium">
-      <li><a href="/" class="menu-item">INÍCIO</a></li>
-      <li><a href="#sobre" class="menu-item">SOBRE</a></li>
-      <li><a href="#atuacao" class="menu-item">ATUAÇÃO</a></li>
-      <li><a href="#artigos" class="menu-item">ARTIGOS</a></li>
-      <li><a href="#cursos" class="menu-item">CURSOS</a></li>
-      <li><a href="#contato" class="menu-item">CONTATO</a></li>
-      <li>
-        <a href="https://wa.me/5554999058637" target="_blank"
-           class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
-           💬 WHATSAPP
+    <nav class="flex items-center gap-6 mt-4 md:mt-0">
+      {menuItems.map((item) => (
+        <a
+          href={item.href}
+          class="text-white hover:text-cyan-300 font-medium transition-colors"
+        >
+          {item.name}
         </a>
-      </li>
-    </ul>
+      ))}
+      <a
+        href="https://wa.me/5554999058637"
+        target="_blank"
+        class="bg-green-600 px-4 py-2 rounded-md font-semibold hover:bg-green-700 transition"
+      >
+        💬 WHATSAPP
+      </a>
+    </nav>
   </div>
-</nav>
+</header>

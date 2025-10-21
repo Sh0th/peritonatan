@@ -2,20 +2,88 @@
 import Layout from '../layouts/Layout.astro';
 import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
 ---
 
-<Layout title="Welcome to Astro.">
-    <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
+<Layout title="Perito Natan | Perícia Forense Digital e Segurança da Informação">
+  <Fragment slot="head">
+    <meta name="description" content="Perito Natan Fachini — Perícia Forense Digital, Segurança da Informação e Investigação Cibernética." />
+    <meta name="author" content="Natan Fachini" />
+  </Fragment>
+
+  <!-- 🔹 Alerta contextual do Astro -->
+  <ContextAlert class="mb-8" />
+
+  <!-- 🟦 Seção Início -->
+  <section id="inicio" class="text-center mt-20">
+    <h1 class="text-5xl font-bold mb-6">Perito Natan Fachini</h1>
+    <p class="text-xl mb-8 max-w-3xl mx-auto">
+      Especialista em <strong>Perícia Forense Digital</strong> e <strong>Segurança da Informação</strong>,
+      com experiência em análise de evidências, autenticação de documentos digitais, rastreamento de incidentes e investigação cibernética.
     </p>
+    <a href="https://wa.me/5554999058637" target="_blank"
+      class="bg-green-600 text-white px-6 py-3 rounded-xl text-lg hover:bg-green-700 transition">
+      💬 Fale comigo no WhatsApp
+    </a>
+  </section>
+
+  <!-- 🧠 Sobre -->
+  <section id="sobre" class="mt-24 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Sobre</h2>
+    <p class="text-lg max-w-4xl mx-auto leading-relaxed">
+      Atuo como Perito Forense Digital e Consultor em Segurança da Informação, auxiliando escritórios de advocacia, empresas e o poder judiciário em
+      demandas que envolvem evidências digitais. Desenvolvo análises técnicas e pareceres que sustentam a verdade dos fatos em processos judiciais e administrativos.
+    </p>
+  </section>
+
+  <!-- ⚖️ Áreas de Atuação -->
+  <section id="atuacao" class="mt-24 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Áreas de Atuação</h2>
+    <ul class="list-none text-lg leading-relaxed">
+      <li>🔍 Verificação de assinaturas eletrônicas e autenticidade de documentos</li>
+      <li>💾 Extração e preservação forense de dados em mídias e dispositivos</li>
+      <li>📱 Perícia em dispositivos móveis e recuperação de informações</li>
+      <li>🕵️‍♂️ Investigação de incidentes cibernéticos e rastreamento de autoria</li>
+      <li>⚖️ Apoio técnico em processos judiciais e assistências técnicas</li>
+    </ul>
+  </section>
+
+  <!-- 📰 Artigos -->
+  <section id="artigos" class="mt-24 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Artigos e Publicações</h2>
+    <p class="text-lg max-w-3xl mx-auto leading-relaxed">
+      Em breve, publicações sobre temas como <strong>computação forense</strong>, <strong>cadeia de custódia digital</strong>,
+      e <strong>investigação de fraudes eletrônicas</strong>.
+    </p>
+  </section>
+
+  <!-- 🎓 Cursos -->
+  <section id="cursos" class="mt-24 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Cursos e Treinamentos</h2>
+    <p class="text-lg max-w-3xl mx-auto leading-relaxed">
+      Workshops e treinamentos práticos em <strong>Perícia Digital</strong> e <strong>Segurança da Informação</strong>.
+      <br />
+      Capacitação para advogados, peritos e profissionais da área técnica.
+    </p>
+  </section>
+
+  <!-- 📩 Contato -->
+  <section id="contato" class="mt-24 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Contato</h2>
+    <p class="text-lg">
+      📧 <a href="mailto:contato@peritonatan.com.br" class="underline text-blue-400">contato@peritonatan.com.br</a>
+    </p>
+    <p class="text-lg">📍 Farroupilha • Rio Grande do Sul</p>
+  </section>
+
+  <!-- ⚙️ Rodapé -->
+  <footer class="mt-32 text-center text-sm text-gray-400">
+    <p>© 2025 Perito Natan Fachini — Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- 🔹 Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/5554999058637" target="_blank"
+    class="fixed bottom-6 right-6 bg-green-600 text-white rounded-full shadow-lg p-4 hover:bg-green-700 transition transform hover:scale-110 z-50"
+    aria-label="Fale comigo no WhatsApp">
+    💬
+  </a>
 </Layout>
